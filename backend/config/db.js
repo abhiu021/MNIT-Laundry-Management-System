@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+// Set mongoose options
+mongoose.set('strictPopulate', false);
 
 const connectDB = async () => {
   try {
@@ -8,7 +12,7 @@ const connectDB = async () => {
     });
     console.log('MongoDB Connected');
   } catch (err) {
-    console.error(err.message);
+    console.error('MongoDB Connection Error:', err.message);
     process.exit(1);
   }
 };

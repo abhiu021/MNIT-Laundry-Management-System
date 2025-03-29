@@ -1,0 +1,25 @@
+{
+  "name": "mnit-laundry-management-system",
+  "version": "1.0.0",
+  "description": "MNIT Laundry Management System with frontend and backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend/laundry-frontend && npm start",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend/laundry-frontend && npm install @mui/material @mui/icons-material @emotion/react @emotion/styled --legacy-peer-deps",
+    "install-all": "npm install && npm run install-backend && npm run install-frontend"
+  },
+  "keywords": [
+    "laundry",
+    "management",
+    "system",
+    "MNIT"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
